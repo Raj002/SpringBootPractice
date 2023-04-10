@@ -34,7 +34,7 @@ public class UserResource {
     public User user(@PathVariable int id) throws UserNotFoundException {
         User user = userDaoService.findOne(id);
         if (user == null)
-            throw new UserNotFoundException("id : " + id);
+            throw new UserNotFoundException("id: " + id);
         return user;
     }
 
