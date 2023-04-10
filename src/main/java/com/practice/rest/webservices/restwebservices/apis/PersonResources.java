@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class PersonResource {
+public class PersonResources {
 
-    //@GetMapping(path = "/person", params = "version=1.0")
-    @GetMapping(path = "/person", headers = "X-API-VERSION=1.0")
+    @GetMapping(path = "/person", params = "version=1.0")
+    //@GetMapping(path = "/person", headers = "X-API-VERSION=1.0")
     public Person1 person1Name() {
         return new Person1("John");
     }
